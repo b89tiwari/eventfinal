@@ -22,5 +22,8 @@ app.use("/api/users",userRoute);
 app.use("/api/events",eventRoute);
 app.use("/api/categories",categoryRoute);
 app.use("/api/upload",uploadRoute);
-app.listen("5000");
+if(process.env.API_PORT)
+{
+    app.listen(process.env.API_PORT);
+}
 
