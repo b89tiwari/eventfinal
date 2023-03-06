@@ -45,7 +45,7 @@ router.put("/:id", async (req, resp) => {
 })
 
 //DELETE EVENTS
-router.put("/:id", async (req, resp) => {
+router.delete("/:id", async (req, resp) => {
     try {
         const event = await Event.findById(req.params.id);
         if (event.username === req.body.username) {
