@@ -1,7 +1,6 @@
 const multer = require("multer");
 const router = require("express").Router();
 const path = require("path");
-const main = require('require-main-filename')()
 const storage = multer.diskStorage({
     destination: (req,file,cb)=>{
         cb(null,'/images')
