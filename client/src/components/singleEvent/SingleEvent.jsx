@@ -69,7 +69,7 @@ export default function SingleEvent() {
                 ) : (
                     <h1 className='singlePostTitle'>
                         {event.title}
-                        {event.username === user.username && (
+                        {event.username === user?.username && (
                             <div className='singlePostEdit'>
                                 <i className="singlePostIcon fa-solid fa-pen-to-square" onClick={() => setUpdateMode(true)}></i>
                                 <i className="singlePostIcon fa-solid fa-trash" onClick={handleDeleteEvent}></i>
